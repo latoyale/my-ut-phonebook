@@ -1,0 +1,89 @@
+.member {
+  display: flex;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.member:nth-child(even) {
+  background-color: #eee;
+}
+
+.member:last-of-type {
+  border-bottom: 0;
+}
+
+.member .id {
+  flex: 1 1 50px;
+}
+.member .profile {
+  flex: 8 1 14%;
+}
+
+.member .content {
+  flex: 1 1 100%;
+}
+
+.member.done .content {
+  background-color: yellow;
+}
+
+.member-input {
+  padding: 1% 2%;
+  appearance: none;
+  border: 1px solid;
+  background-color: #f3f3f3;
+  margin-top: 3%;
+  margin-right: 1%;
+  margin-left: 2%;
+  outline: none;
+}
+
+.button {
+  background-color: lightblue;
+  border: none;
+  color: black;
+  padding: 1%;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+form {
+  margin-bottom: 2%;
+}
+
+#main {
+  margin: auto;
+  width: 100vw;
+  padding: 1%;
+}
+
+.menu {
+  border: 2px solid black;
+  padding-bottom: 6%;
+  margin-bottom: 6%;
+}
+
+.icon {
+  width: 64%;
+  height: 70%;
+}
+
+@media screen and (min-width: 1024px) {
+  #main {
+    max-width: 1140px;
+  }
+}
+
+.member-input:hover {
+  background-color: lightblue;
+}
+
+.member:hover {
+  background-color: lightblue;
+}
+
+.headerFormat {
+  background-color: lightblue;
+  padding: 1%;
+}

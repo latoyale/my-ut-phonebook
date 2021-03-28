@@ -1,0 +1,47 @@
+<div id="main">
+  <h1>My UTI Phonebook</h1>
+
+  <div>
+    <div class="members">
+      <form (submit)="addMember()" class="menu">
+        <div class="headerFormat">Add New Contact</div>
+        <input
+          type="text"
+          name="inputMembers"
+          placeholder="Name"
+          class="member-input"
+          [(ngModel)]="inputMember"
+        />
+
+        <input
+          type="text"
+          name="inputPhones"
+          placeholder="Phone Number"
+          class="member-input"
+          [(ngModel)]="inputPhones"
+        />
+
+        <input
+          type="submit"
+          value=" + Add Member"
+          class="member-submit, button"
+        />
+      </form>
+    </div>
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+      <div
+        *ngFor="let member of members; let i = index"
+        class="member {{ member.completed ? 'done' : '' }}"
+        cdkDrag
+      >
+        <i class="material-icons" (click)="deleteMember(i)">person</i>
+        <div class="content" (click)="toggleDone(i)">{{ member.content }}</div>
+        <i class="material-icons">phone</i>
+        <div class="content" (click)="toggleDone(i)" prefix="+7">
+          {{ member.phone | mask: "(000) 000-0000" }}
+        </div>
+        <i class="material-icons" (click)="deleteMember(i)">delete</i>
+      </div>
+    </div>
+  </div>
+</div>
