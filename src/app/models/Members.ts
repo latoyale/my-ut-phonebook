@@ -3,4 +3,7 @@ export class Members {
   phone!: string;
   edit: boolean = false;
   completed: boolean = false;
+  
 }
+
+

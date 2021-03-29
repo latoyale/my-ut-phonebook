@@ -34,10 +34,10 @@
         class="member {{ member.completed ? 'done' : '' }}"
         cdkDrag
       >
-        <i class="material-icons" (click)="deleteMember(i)">person</i>
-        <div class="content" (click)="toggleDone(i)">{{ member.content }}</div>
-        <i class="material-icons">phone</i>
-        <div class="content" (click)="toggleDone(i)" prefix="+7">
+        <i class="material-icons" (click)="deleteMember(i)" contenteditable="true">person</i>
+        <div class="content" (click)="toggleDone(i)" contenteditable="true">{{ member.content }} </div>
+        <i class="material-icons">phone</i> 
+        <div class="content" (click)="toggleDone(i)" prefix="+7" contenteditable>
           {{ member.phone | mask: "(000) 000-0000" }}
         </div>
         <i class="material-icons" (click)="deleteMember(i)">delete</i>

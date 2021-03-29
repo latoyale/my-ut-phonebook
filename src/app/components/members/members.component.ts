@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Members } from './../../models/Members';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-members',
   templateUrl: './members.component.html',
   styleUrls: ['./members.component.css'],
 })
+
 export class MembersComponent implements OnInit {
   members: Members[] = [];
 

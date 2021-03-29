@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
