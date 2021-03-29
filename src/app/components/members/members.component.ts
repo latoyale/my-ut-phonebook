@@ -29,7 +29,7 @@ export class MembersComponent implements OnInit {
         content: 'Second member',
         phone: '5769874389',
         edit: false,
-        completed: true,
+        completed: false,
       },
       {
         content: 'third member',
